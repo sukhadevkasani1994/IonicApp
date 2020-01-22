@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Sign Up
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>First Name</ion-label>
+          <ion-input placeholder="First Name" type="text" [(ngModel)]="signUpObj.first_name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Last Name</ion-label>
+          <ion-input placeholder="Last Name" type="text" [(ngModel)]="signUpObj.last_name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-input placeholder="Email" type="text" [(ngModel)]="signUpObj.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input placeholder="Password" type="password" [(ngModel)]="signUpObj.password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password Confirmation</ion-label>
+          <ion-input placeholder="Password Confirmation" type="password" [(ngModel)]="signUpObj.password_confirmation">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-button (click)="btnClick()">SignUp</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

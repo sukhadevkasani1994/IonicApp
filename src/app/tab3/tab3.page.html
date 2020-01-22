@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Users List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<!-- <ion-content>
+  <ion-item>Team List</ion-item>
+    <ion-list *ngFor="let team of UsersList">
+      <ion-item >
+        <ion-item>id: {{team.id}} name: {{team.name}} First Name: {{team.first_name}} Last Name: {{team.last_name}}</ion-item>
+      </ion-item>
+    </ion-list>
+</ion-content> -->
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>First Name</ion-col>
+    <ion-col col-4>Last Name</ion-col>
+    <ion-col col-4>Email</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-4 *ngFor="let first_name of UsersList; let i = index">{{ UsersList[i].first_name }}</ion-col>
+    <ion-col col-4 *ngFor="let last_name of UsersList; let i = index">{{ UsersList[i].last_name }}</ion-col>
+    <ion-col col-4 *ngFor="let email of UsersList; let i = index">{{ UsersList[i].email }}</ion-col>
+  </ion-row>
+</ion-grid>
